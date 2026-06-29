@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מועדון ספרים צרפתיים שלום! 🦔📚</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Frank+Ruhl+Libre:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        parisBlue: '#1D3557',
+                        parisRed: '#E63946',
+                        cozyGreen: '#4F772D',
+                        lightGrass: '#ECF3E8',
+                        cozyBeige: '#FDFBF7',
+                        cozyText: '#2B2D42'
+                    },
+                    fontFamily: {
+                        serif: ['"Frank Ruhl Libre"', 'serif'],
+                        sans: ['"Assistant"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .carousel-slide {
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+        /* Elegant full-page background styling */
+        .page-bg {
+            background-image: url('/assets/background_medow.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="page-bg text-cozyText font-sans min-h-screen relative overflow-x-hidden selection:bg-parisRed/20">
+
+    <!-- Soft overlay to ensure great text readability over the background image -->
+    <div class="absolute inset-0 bg-cozyBeige/85 backdrop-blur-[2px] z-0 pointer-events-none"></div>
+
+    <div class="relative z-10 w-full bg-parisBlue text-white text-center py-2 text-s font-semibold tracking-wide border-b-4 border-parisRed">
+        ✨ חוגגות וחוגגים שנה למועדון ספרים צרפתיים שלוםםםםםםם ✨
+    </div>
+
+    <div class="relative z-10 max-w-md mx-auto px-5 py-8 min-h-screen flex flex-col justify-between">
+        
+        <header class="text-center mb-8 bg-white/90 backdrop-blur-sm p-6 rounded-3xl border border-lightGrass shadow-sm">
+            <div class="relative inline-block mb-3">
+                <div class="text-5xl animate-bounce">🗼</div>
+                <div class="absolute -bottom-2 -right-2 text-3xl">📚</div>
+            </div>
+            <h1 class="font-serif font-bold text-3xl text-parisBlue tracking-tight">ספרים צרפתיים שלום!</h1>
+            <p class="text-sm text-cozyGreen font-semibold mt-1"></p>
+            <div class="w-24 h-0.5 bg-parisRed mx-auto my-3"></div>
+            <p class="text-xs text-cozyText/80 leading-relaxed">
+                ברוכים הבאים למועדון ספרים צרפתיים! נפגשיםות כל חודש ומדבריםות על הספר שאתםן בוחריםות
+            </p>
+        </header>
+
+        <main class="space-y-4 mb-8">
+            
+            <a href="https://docs.google.com/forms/d/1j0bYkUqr1g5QTmIa57qfPC3c8zTuAxRRKn828yIb-rs/edit" target="_blank" 
+               class="group flex items-center justify-between p-4 bg-parisRed text-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <span class="text-2xl bg-white/20 p-2 rounded-xl">📝</span>
+                    <div class="text-right">
+                        <p class="font-bold text-base leading-tight">להרשמה למפגש הבא:</p>
+                        <p class="text-xs text-white/90 mt-0.5"></p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-left text-sm opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
+            </a>
+
+            <a href="#" class="group flex items-center justify-between p-4 bg-white/95 backdrop-blur-sm border border-lightGrass text-cozyText rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <span class="text-2xl bg-[#E8F5E9] p-2 rounded-xl">💬</span>
+                    <div class="text-right">
+                        <p class="font-bold text-base leading-tight text-cozyGreen">קבוצת הווטסאפ שלנו</p>
+                        <p class="text-xs text-cozyText/60 mt-0.5">עדכונים שוטפים ולו״ז מפגשים</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-left text-sm text-cozyGreen opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
+            </a>
+
+            <a href="#" class="group flex items-center justify-between p-4 bg-white/95 backdrop-blur-sm border border-lightGrass text-cozyText rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <span class="text-2xl bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-600 p-2 rounded-xl text-white flex items-center justify-center w-11 h-11"><i class="fa-brands fa-instagram text-xl"></i></span>
+                    <div class="text-right">
+                        <p class="font-bold text-base leading-tight text-parisBlue">עמוד האינסטגרם שלנו</p>
+                        <p class="text-xs text-cozyText/60 mt-0.5"></p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-left text-sm text-parisBlue opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
+            </a>
+
+            <div class="p-4 bg-parisBlue text-white rounded-2xl shadow-md">
+                <div class="flex items-center space-x-3 space-x-reverse mb-3">
+                    <span class="text-2xl bg-white/10 p-2 rounded-xl">🎁</span>
+                    <div class="text-right">
+                        <p class="font-bold text-base leading-tight">תוכן בונוס ישירות למייל</p>
+                        <p class="text-xs text-white/80 mt-0.5">קבלו חומרי העשרה ומאמרים לקראת המפגש הבא</p>
+                    </div>
+                </div>
+                <div class="flex space-x-2 space-x-reverse mt-2">
+                    <input type="email" placeholder="כתובת המייל שלך..." class="w-full px-3 py-2 text-xs rounded-xl bg-white text-cozyText focus:outline-none focus:ring-2 focus:ring-parisRed" />
+                    <button class="bg-parisRed text-white px-4 py-2 rounded-xl font-bold text-xs hover:bg-opacity-90 transition-all">שלחי</button>
+                </div>
+            </div>
+
+        </main>
+
+        <section class="bg-white/95 rounded-3xl p-5 shadow-sm border border-lightGrass mb-8 relative">
+            <h2 class="font-serif font-bold text-lg text-parisBlue mb-3 flex items-center space-x-2 space-x-reverse">
+                <span>📚</span>
+                <span>הספרים שקראנו</span>
+            </h2>
+
+            <div class="relative overflow-hidden h-[250px] rounded-xl bg-lightGrass/30 p-3 flex items-center justify-center">
+                
+                <!-- Slide 0 -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-100" id="slide-0">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/big_hug.jpg" alt="חיבוק גדול" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="font-serif font-bold text-base text-parisBlue leading-tight">חיבוק גדול</h3>
+                    <p class="text-xs text-cozyGreen font-semibold">רומן גארי</p>
+                </div>
+
+                <!-- Slide 1 -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-1">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/W_childhood.jpg" alt="W או זיכרון ילדות" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="font-serif font-bold text-base text-parisBlue leading-tight">W או זיכרון ילדות</h3>
+                    <p class="text-xs text-cozyGreen font-semibold">ז'ורז' פרק</p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-2">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/elementari.jpg" alt="החלקיקים האלמנטריים" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="font-serif font-bold text-base text-parisBlue leading-tight">החלקיקים האלמנטריים</h3>
+                    <p class="text-xs text-cozyGreen font-semibold">מישל וולבק</p>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-3">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/eddies_end.jpg" alt="הסוף של אדי" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="font-serif font-bold text-base text-parisBlue leading-tight">הסוף של אדי</h3>
+                    <p class="text-xs text-cozyGreen font-semibold">אדואר לואי</p>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-4">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/into_the_night_edge.jpg" alt="מסע אל קצה הלילה" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="font-serif font-bold text-base text-parisBlue leading-tight">מסע אל קצה הלילה</h3>
+                    <p class="text-xs text-cozyGreen font-semibold">לואי פרדינן סלין</p>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-5">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/madam_bovarie.jpg" alt="מדאם בובארי" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="font-serif font-bold text-base text-parisBlue leading-tight">מדאם בובארי</h3>
+                    <p class="text-xs text-cozyGreen font-semibold">גוסטב פלובר</p>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-6">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/the_fall.jpg" alt="הנפילה" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="font-serif font-bold text-base text-parisBlue leading-tight">הנפילה</h3>
+                    <p class="text-xs text-cozyGreen font-semibold">אלבר קאמי</p>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-7">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/the_lover.jpg" alt="המאהב" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="font-serif font-bold text-base text-parisBlue leading-tight">המאהב</h3>
+                    <p class="text-xs text-cozyGreen font-semibold">מרגריט דיראס</p>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-8">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/kites.jpg" alt="עפיפונים" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="font-serif font-bold text-base text-parisBlue leading-tight">עפיפונים</h3>
+                    <p class="text-xs text-cozyGreen font-semibold">רומן גארי</p>
+                </div>
+
+                <!-- Slide 9 -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-9">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/elgantiyotshelkipod.jpg" alt="אלגנטיות של קיפוד" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="font-serif font-bold text-base text-parisBlue leading-tight">אלגנטיות של קיפוד</h3>
+                    <p class="text-xs text-cozyGreen font-semibold">מוריאל ברברי</p>
+                </div>
+
+            </div>
+
+            <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white text-parisBlue shadow flex items-center justify-center hover:bg-lightGrass z-20">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+            </button>
+            <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white text-parisBlue shadow flex items-center justify-center hover:bg-lightGrass z-20">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+        </section>
+
+        <section class="bg-lightGrass rounded-2xl p-4 text-center border border-cozyGreen/20 mb-6">
+            <h3 class="text-sm font-bold text-parisBlue mb-1"><i class="fa-solid fa-heart text-parisRed ml-1"></i> המארגנות והצוות הפעיל</h3>
+            <p class="text-xs text-cozyText/80 mb-3">מחכות לכן! תרגישו חופשי לפנות אלינו באינסטגרם בכל שאלה :)</p>
+            
+            <div class="flex justify-center space-x-4 space-x-reverse text-xs">
+                <a href="#" class="flex items-center space-x-1 space-x-reverse bg-white px-3 py-1.5 rounded-xl shadow-sm text-cozyText hover:text-parisRed transition-colors">
+                    <i class="fa-brands fa-instagram text-parisRed"></i>
+                    <span class="font-semibold">@meravhahn123</span>
+                </a>
+                <a href="#" class="flex items-center space-x-1 space-x-reverse bg-white px-3 py-1.5 rounded-xl shadow-sm text-cozyText hover:text-parisRed transition-colors">
+                    <i class="fa-brands fa-instagram text-parisRed"></i>
+                    <span class="font-semibold">@calanit_hainbalit</span>
+                </a>
+                <a href="#" class="flex items-center space-x-1 space-x-reverse bg-white px-3 py-1.5 rounded-xl shadow-sm text-cozyText hover:text-parisRed transition-colors">
+                    <i class="fa-brands fa-instagram text-parisRed"></i>
+                    <span class="font-semibold">@michala_ma_shebala</span>
+                </a>
+            </div>
+        </section>
+
+        <footer class="text-center text-[11px] text-cozyText/50">
+            מועדון ספרים צרפתיים שלום • אובלומוב ספרים, נחמה 4, יפו 🗼🌳
+        </footer>
+
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 10;
+
+        function updateCarousel() {
+            for (let i = 0; i < totalSlides; i++) {
+                const slide = document.getElementById('slide-' + i);
+                if (i === currentSlide) {
+                    slide.classList.remove('opacity-0', 'pointer-events-none');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0', 'pointer-events-none');
+                }
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+    </script>
+
+</body>
+</html>
