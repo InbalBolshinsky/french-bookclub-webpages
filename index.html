@@ -43,7 +43,7 @@
         ✨ חוגגות וחוגגים שנה למועדון ספרים צרפתיים שלוםםםםםםם ✨
     </div>
 
-    <!-- כרטיסיית התוכן המרכזית - מותאמת למובייל -->
+    <!-- כרטיסיית התוכן המרכזית -->
     <div class="relative z-10 max-w-md mx-auto px-5 py-8 min-h-screen flex flex-col justify-between">
         
         <header class="text-center mb-8 bg-white/95 backdrop-blur-sm p-6 rounded-3xl border border-lightGrass shadow-md">
@@ -98,7 +98,7 @@
                 <i class="fa-solid fa-chevron-left text-sm text-parisBlue opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
             </a>
 
-            <!-- ניוזלטר מייל המחובר ל-Formspree AJAX -->
+            <!-- ניוזלטר מייל המחובר ל-Sheet Monkey -->
             <div class="p-4 bg-parisBlue text-white rounded-2xl shadow-md">
                 <div class="flex items-center space-x-3 space-x-reverse mb-3">
                     <span class="text-2xl bg-white/10 p-2 rounded-xl">🎁</span>
@@ -108,16 +108,19 @@
                     </div>
                 </div>
                 
-                <!-- הודעות הצלחה ושגיאה מובנות של Formspree -->
-                <div data-fs-success class="text-xs text-emerald-400 font-semibold mb-3 text-center bg-white/10 p-2 rounded-xl hidden">✨ איזה כיף! המייל נשמר בהצלחה. ✨</div>
-                <div data-fs-error class="text-xs text-parisRed font-semibold mb-3 text-center bg-white p-2 rounded-xl hidden"></div>
+                <!-- הודעות סטטוס בעיצוב אישי (נשלטות ע"י ה-JavaScript למטה) -->
+                <div id="form-success" class="text-xs text-emerald-400 font-semibold mb-3 text-center bg-white/10 p-2 rounded-xl hidden">✨ איזה כיף! המייל נשמר בהצלחה בטבלה. ✨</div>
+                <div id="form-error" class="text-xs text-parisRed font-semibold mb-3 text-center bg-white p-2 rounded-xl hidden">אופס! היתה שגיאה בשליחה. נסי שוב.</div>
 
-                <form id="email-form">
+                <form id="email-form" action="https://api.sheetmonkey.io/form/5GEFNeXsBeuwMtn1vdvEiC" method="POST">
+                    <!-- שדה נסתר להוספת תאריך ושעה אוטומטיים של Sheet Monkey -->
+                    <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+                    
                     <div class="flex space-x-2 space-x-reverse mt-2 relative">
-                        <input type="email" name="email" id="email" placeholder="כתובת המייל שלך..." required data-fs-field class="w-full px-3 py-2 text-xs rounded-xl bg-white text-cozyText focus:outline-none focus:ring-2 focus:ring-parisRed" />
-                        <button type="submit" data-fs-submit-btn class="bg-parisRed text-white px-4 py-2 rounded-xl font-bold text-xs hover:bg-opacity-90 transition-all disabled:opacity-50">שלחי</button>
+                        <!-- שימי לב שהשם שונה ל-Email עם E גדולה כדי להתאים בדיוק להגדרת הטופס שלך -->
+                        <input type="email" name="Email" id="email" placeholder="כתובת המייל שלך..." required class="w-full px-3 py-2 text-xs rounded-xl bg-white text-cozyText focus:outline-none focus:ring-2 focus:ring-parisRed" />
+                        <button type="submit" id="submit-btn" class="bg-parisRed text-white px-4 py-2 rounded-xl font-bold text-xs hover:bg-opacity-90 transition-all disabled:opacity-50">שלחי</button>
                     </div>
-                    <span data-fs-error="email" class="text-[11px] text-rose-300 mt-1 block text-right"></span>
                 </form>
             </div>
 
@@ -288,13 +291,47 @@
             updateCarousel();
         }
 
-        // אתחול רשמי של Formspree AJAX
-        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-        formspree('initForm', { formElement: '#email-form', formId: 'mykqpwbk' });
-    </script>
+        // לוגיקת שליחת טופס חלקה ל-Sheet Monkey (AJAX Fetch)
+        const form = document.getElementById("email-form");
+        const successMessage = document.getElementById("form-success");
+        const errorMessage = document.getElementById("form-error");
+        const submitBtn = document.getElementById("submit-btn");
 
-    <!-- טעינת ה-CDN של Formspree בצורה דפוסיבית -->
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault(); // מונע מהדף להתרענן או לעבור לאתר של Sheet Monkey
+            
+            // שינוי מצב הכפתור לזמן השליחה
+            submitBtn.innerText = "שולח...";
+            submitBtn.disabled = true;
+            
+            // הסתרת הודעות קודמות אם היו
+            successMessage.classList.add("hidden");
+            errorMessage.classList.add("hidden");
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData
+                });
+
+                if (response.ok) {
+                    successMessage.classList.remove("hidden"); // מציג הודעת הצלחה
+                    form.reset(); // מאפס את שדה הטקסט של המייל
+                    submitBtn.innerText = "נשלח!";
+                } else {
+                    errorMessage.classList.remove("hidden"); // מציג שגיאה מהשרת
+                    submitBtn.innerText = "שלחי";
+                    submitBtn.disabled = false;
+                }
+            } catch (error) {
+                errorMessage.classList.remove("hidden"); // מציג שגיאת רשת
+                submitBtn.innerText = "שלחי";
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
 
 </body>
 </html>
