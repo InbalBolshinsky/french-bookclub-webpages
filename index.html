@@ -98,7 +98,7 @@
                 <i class="fa-solid fa-chevron-left text-sm text-parisBlue opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
             </a>
 
-            <!-- ניוזלטר מייל -->
+            <!-- ניוזלטר מייל המחובר ל-Formspree AJAX -->
             <div class="p-4 bg-parisBlue text-white rounded-2xl shadow-md">
                 <div class="flex items-center space-x-3 space-x-reverse mb-3">
                     <span class="text-2xl bg-white/10 p-2 rounded-xl">🎁</span>
@@ -107,9 +107,17 @@
                         <p class="text-xs text-white/80 mt-0.5">קבלו חומרי העשרה ומאמרים לקראת המפגש הבא</p>
                     </div>
                 </div>
-                <form id="email-form" class="flex space-x-2 space-x-reverse mt-2">
-                    <input type="email" name="email" placeholder="כתובת המייל שלך..." required class="w-full px-3 py-2 text-xs rounded-xl bg-white text-cozyText focus:outline-none focus:ring-2 focus:ring-parisRed" />
-                    <button type="submit" class="bg-parisRed text-white px-4 py-2 rounded-xl font-bold text-xs hover:bg-opacity-90 transition-all">שלחי</button>
+                
+                <!-- הודעות הצלחה ושגיאה מובנות של Formspree -->
+                <div data-fs-success class="text-xs text-emerald-400 font-semibold mb-3 text-center bg-white/10 p-2 rounded-xl hidden">✨ איזה כיף! המייל נשמר בהצלחה. ✨</div>
+                <div data-fs-error class="text-xs text-parisRed font-semibold mb-3 text-center bg-white p-2 rounded-xl hidden"></div>
+
+                <form id="email-form">
+                    <div class="flex space-x-2 space-x-reverse mt-2 relative">
+                        <input type="email" name="email" id="email" placeholder="כתובת המייל שלך..." required data-fs-field class="w-full px-3 py-2 text-xs rounded-xl bg-white text-cozyText focus:outline-none focus:ring-2 focus:ring-parisRed" />
+                        <button type="submit" data-fs-submit-btn class="bg-parisRed text-white px-4 py-2 rounded-xl font-bold text-xs hover:bg-opacity-90 transition-all disabled:opacity-50">שלחי</button>
+                    </div>
+                    <span data-fs-error="email" class="text-[11px] text-rose-300 mt-1 block text-right"></span>
                 </form>
             </div>
 
@@ -252,7 +260,7 @@
 
     </div>
 
-    <!-- לוגיקת הקרוסלה -->
+    <!-- לוגיקת האתר -->
     <script>
         let currentSlide = 0;
         const totalSlides = 10;
@@ -279,7 +287,14 @@
             currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
             updateCarousel();
         }
+
+        // אתחול רשמי של Formspree AJAX
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#email-form', formId: 'mykqpwbk' });
     </script>
+
+    <!-- טעינת ה-CDN של Formspree בצורה דפוסיבית -->
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
