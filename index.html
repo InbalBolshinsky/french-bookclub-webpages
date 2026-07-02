@@ -35,16 +35,18 @@
         }
     </style>
 </head>
-<body class="text-cozyText font-sans min-h-screen relative overflow-x-hidden selection:bg-parisRed/20" 
-      style="background-image: url('./assets/background_paris.png?v=1'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #ffffff;">
+<body class="text-cozyText font-sans min-h-screen relative overflow-x-hidden selection:bg-parisRed/20 bg-white" 
+      style="background-image: url('./assets/background_paris.png?v=1'); background-size: contain; background-position: top center; background-repeat: repeat-y; background-attachment: scroll;">
 
+    <!-- בר עליון חגיגי -->
     <div class="relative z-10 w-full bg-parisBlue text-white text-center py-2 text-s font-semibold tracking-wide border-b-4 border-parisRed">
         ✨ חוגגות וחוגגים שנה למועדון ספרים צרפתיים שלוםםםםםםם ✨
     </div>
 
+    <!-- כרטיסיית התוכן המרכזית - מותאמת למובייל -->
     <div class="relative z-10 max-w-md mx-auto px-5 py-8 min-h-screen flex flex-col justify-between">
         
-        <header class="text-center mb-8 bg-white/90 backdrop-blur-sm p-6 rounded-3xl border border-lightGrass shadow-sm">
+        <header class="text-center mb-8 bg-white/95 backdrop-blur-sm p-6 rounded-3xl border border-lightGrass shadow-md">
             <div class="relative inline-block mb-3">
                 <div class="text-5xl animate-bounce">🗼</div>
                 <div class="absolute -bottom-2 -right-2 text-3xl">📚</div>
@@ -59,8 +61,9 @@
 
         <main class="space-y-4 mb-8">
             
+            <!-- כפתור גוגל פורמס -->
             <a href="https://docs.google.com/forms/d/1j0bYkUqr1g5QTmIa57qfPC3c8zTuAxRRKn828yIb-rs/edit" target="_blank" 
-               class="group flex items-center justify-between p-4 bg-parisRed text-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+               class="group flex items-center justify-between p-4 bg-parisRed text-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform active:scale-95">
                 <div class="flex items-center space-x-3 space-x-reverse">
                     <span class="text-2xl bg-white/20 p-2 rounded-xl">📝</span>
                     <div class="text-right">
@@ -71,7 +74,8 @@
                 <i class="fa-solid fa-chevron-left text-sm opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
             </a>
 
-            <a href="https://chat.whatsapp.com/Haov3SLTXpCGn5VYYW2CZN?mode=gi_t" class="group flex items-center justify-between p-4 bg-white/95 backdrop-blur-sm border border-lightGrass text-cozyText rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+            <!-- כפתור ווטסאפ -->
+            <a href="https://chat.whatsapp.com/Haov3SLTXpCGn5VYYW2CZN?mode=gi_t" target="_blank" class="group flex items-center justify-between p-4 bg-white/95 backdrop-blur-sm border border-lightGrass text-cozyText rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform active:scale-95">
                 <div class="flex items-center space-x-3 space-x-reverse">
                     <span class="text-2xl bg-[#E8F5E9] p-2 rounded-xl">💬</span>
                     <div class="text-right">
@@ -82,7 +86,8 @@
                 <i class="fa-solid fa-chevron-left text-sm text-cozyGreen opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
             </a>
 
-            <a href="https://www.instagram.com/hello_french_bookclub?igsh=YnVhc3lwbG1iMWc2" class="group flex items-center justify-between p-4 bg-white/95 backdrop-blur-sm border border-lightGrass text-cozyText rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+            <!-- כפתור אינסטגרם -->
+            <a href="https://www.instagram.com/hello_french_bookclub?igsh=YnVhc3lwbG1iMWc2" target="_blank" class="group flex items-center justify-between p-4 bg-white/95 backdrop-blur-sm border border-lightGrass text-cozyText rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform active:scale-95">
                 <div class="flex items-center space-x-3 space-x-reverse">
                     <span class="text-2xl bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-600 p-2 rounded-xl text-white flex items-center justify-center w-11 h-11"><i class="fa-brands fa-instagram text-xl"></i></span>
                     <div class="text-right">
@@ -93,6 +98,7 @@
                 <i class="fa-solid fa-chevron-left text-sm text-parisBlue opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
             </a>
 
+            <!-- ניוזלטר מייל -->
             <div class="p-4 bg-parisBlue text-white rounded-2xl shadow-md">
                 <div class="flex items-center space-x-3 space-x-reverse mb-3">
                     <span class="text-2xl bg-white/10 p-2 rounded-xl">🎁</span>
@@ -109,7 +115,8 @@
 
         </main>
 
-        <section class="bg-white/95 rounded-3xl p-5 shadow-sm border border-lightGrass mb-8 relative">
+        <!-- קרוסלת הספרים שקראנו -->
+        <section class="bg-white/95 rounded-3xl p-5 shadow-md border border-lightGrass mb-8 relative">
             <h2 class="font-serif font-bold text-lg text-parisBlue mb-3 flex items-center space-x-2 space-x-reverse">
                 <span>📚</span>
                 <span>הספרים שקראנו</span>
@@ -217,32 +224,35 @@
             </button>
         </section>
 
+        <!-- הצוות הפעיל -->
         <section class="bg-lightGrass rounded-2xl p-4 text-center border border-cozyGreen/20 mb-6">
             <h3 class="text-sm font-bold text-parisBlue mb-1"><i class="fa-solid fa-heart text-parisRed ml-1"></i> המארגנות והצוות הפעיל</h3>
             <p class="text-xs text-cozyText/80 mb-3">מחכות לכן! תרגישו חופשי לפנות אלינו באינסטגרם בכל שאלה :)</p>
             
-            <div class="flex justify-center space-x-4 space-x-reverse text-xs">
-                <a href="#" class="flex items-center space-x-1 space-x-reverse bg-white px-3 py-1.5 rounded-xl shadow-sm text-cozyText hover:text-parisRed transition-colors">
+            <div class="flex flex-wrap justify-center gap-2 text-xs">
+                <a href="https://www.instagram.com/meravhahn123" target="_blank" class="flex items-center space-x-1 space-x-reverse bg-white px-3 py-1.5 rounded-xl shadow-sm text-cozyText hover:text-parisRed transition-colors">
                     <i class="fa-brands fa-instagram text-parisRed"></i>
                     <span class="font-semibold">@meravhahn123</span>
                 </a>
-                <a href="#" class="flex items-center space-x-1 space-x-reverse bg-white px-3 py-1.5 rounded-xl shadow-sm text-cozyText hover:text-parisRed transition-colors">
+                <a href="https://www.instagram.com/calanit_hainbalit" target="_blank" class="flex items-center space-x-1 space-x-reverse bg-white px-3 py-1.5 rounded-xl shadow-sm text-cozyText hover:text-parisRed transition-colors">
                     <i class="fa-brands fa-instagram text-parisRed"></i>
                     <span class="font-semibold">@calanit_hainbalit</span>
                 </a>
-                <a href="#" class="flex items-center space-x-1 space-x-reverse bg-white px-3 py-1.5 rounded-xl shadow-sm text-cozyText hover:text-parisRed transition-colors">
+                <a href="https://www.instagram.com/michala_ma_shebala" target="_blank" class="flex items-center space-x-1 space-x-reverse bg-white px-3 py-1.5 rounded-xl shadow-sm text-cozyText hover:text-parisRed transition-colors">
                     <i class="fa-brands fa-instagram text-parisRed"></i>
                     <span class="font-semibold">@michala_ma_shebala</span>
                 </a>
             </div>
         </section>
 
-        <footer class="text-center text-[11px] text-cozyText/50">
+        <!-- פוטר קבוע -->
+        <footer class="text-center text-[11px] text-cozyText/50 pb-4">
             מועדון ספרים צרפתיים שלום • אובלומוב ספרים, נחמה 4, יפו 🗼🌳
         </footer>
 
     </div>
 
+    <!-- לוגיקת הקרוסלה -->
     <script>
         let currentSlide = 0;
         const totalSlides = 10;
