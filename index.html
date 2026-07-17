@@ -81,12 +81,12 @@
 <body class="text-cozyText font-sans min-h-screen relative overflow-x-hidden selection:bg-parisRed/20 bg-white" 
       style="background-image: url('./assets/background_paris.png?v=1'); background-size: contain; background-position: top center; background-repeat: repeat-y; background-attachment: scroll;">
 
-    <!-- בר עליון חגיגי -->
+    <!-- Festive top bar -->
     <div class="relative z-10 w-full bg-parisBlue text-white text-center py-2 text-s font-semibold tracking-wide border-b-4 border-parisRed">
         ✨ חוגגות וחוגגים שנה למועדון ספרים צרפתיים שלוםםםםםםם ✨
     </div>
 
-    <!-- כרטיסיית התוכן המרכזית -->
+    <!-- Main content card -->
     <div class="relative z-10 max-w-md mx-auto px-5 py-8 min-h-screen flex flex-col justify-between">
         
         <header class="text-center mb-8 bg-white/95 backdrop-blur-sm p-6 rounded-3xl border border-lightGrass shadow-md">
@@ -104,7 +104,7 @@
 
         <main class="space-y-4 mb-8">
             
-            <!-- כפתור גוגל פורמס -->
+            <!-- Google Forms button -->
             <a href="https://forms.gle/AQ5DEXx2cMqbnaDAA" target="_blank" 
                class="group flex items-center justify-between p-4 bg-parisRed text-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform active:scale-95">
                 <div class="flex items-center space-x-3 space-x-reverse">
@@ -117,7 +117,7 @@
                 <i class="fa-solid fa-chevron-left text-sm opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
             </a>
 
-            <!-- כפתור הצעות לספרים (החליפו את href בקישור לטופס/תיבה שלכם) -->
+            <!-- Book suggestions button (replace href with your form/box link) -->
             <a id="suggestions-link" href="https://docs.google.com/forms/d/e/1FAIpQLSegpBALgpVrtMLSujcA9dQaHskp6fF_ZRki6VIjY2ZJzjr65A/viewform?usp=sharing&ouid=112745363090000802408" target="_blank"
                class="group flex items-center justify-between mt-3 p-4 bg-lightblue backdrop-blur-sm border border-parisBlue/20 text-parisBlue rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform active:scale-95">
                 <div class="flex items-center space-x-3 space-x-reverse">
@@ -130,19 +130,19 @@
                 <i class="fa-solid fa-chevron-left text-sm text-parisBlue opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
             </a>
 
-            <!-- כפתור ווטסאפ -->
+            <!-- WhatsApp button -->
             <a href="https://chat.whatsapp.com/BmwbecZ2CuD0It84Dhst2r?mode=gi_t" target="_blank" class="group flex items-center justify-between p-4 bg-white/95 backdrop-blur-sm border border-lightGrass text-cozyText rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform active:scale-95">
                 <div class="flex items-center space-x-3 space-x-reverse">
                     <span class="text-2xl bg-gradient-to-tr from-emerald-400 via-green-500 to-teal-600 p-2 rounded-xl text-white flex items-center justify-center w-11 h-11"><i class="fa-brands fa-whatsapp text-xl"></i></span>
                     <div class="text-right">
-                        <p class="font text-base leading-tight text-cozyGreen">קבוצת הווטסאפ שלנו</p>
+                        <p class="font text-base leading-tight text-cozyGreen">מעבר לקבוצה שלנו</p>
                         <p class="text-xs text-cozyText/60 mt-0.5">עדכונים שוטפים ולו״ז מפגשים</p>
                     </div>
                 </div>
                 <i class="fa-solid fa-chevron-left text-sm text-cozyGreen opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
             </a>
 
-            <!-- כפתור אינסטגרם -->
+            <!-- Instagram button -->
             <a href="https://www.instagram.com/hello_french_bookclub?igsh=YnVhc3lwbG1iMWc2" target="_blank" class="group flex items-center justify-between p-4 bg-white/95 backdrop-blur-sm border border-lightGrass text-cozyText rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 transform active:scale-95">
                 <div class="flex items-center space-x-3 space-x-reverse">
                     <span class="text-2xl bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-600 p-2 rounded-xl text-white flex items-center justify-center w-11 h-11"><i class="fa-brands fa-instagram text-xl"></i></span>
@@ -154,7 +154,7 @@
                 <i class="fa-solid fa-chevron-left text-sm text-parisBlue opacity-70 group-hover:translate-x-[-4px] transition-transform"></i>
             </a>
 
-            <!-- ניוזלטר מייל המחובר ל-Sheet Monkey -->
+            <!-- Newsletter email connected to Sheet Monkey -->
             <div class="p-4 bg-parisBlue text-white rounded-2xl shadow-md">
                 <div class="flex items-center space-x-3 space-x-reverse mb-3">
                     <span class="text-2xl bg-white/10 p-2 rounded-xl">🎁</span>
@@ -164,16 +164,16 @@
                     </div>
                 </div>
                 
-                <!-- הודעות סטטוס בעיצוב אישי (נשלטות ע"י ה-JavaScript למטה) -->
+                <!-- Custom status messages (controlled by JavaScript below) -->
                 <div id="form-success" class="text-xs text-emerald-400 font-semibold mb-3 text-center bg-white/10 p-2 rounded-xl hidden">✨ איזה כיף! המייל נשמר בהצלחה בטבלה. ✨</div>
                 <div id="form-error" class="text-xs text-parisRed font-semibold mb-3 text-center bg-white p-2 rounded-xl hidden">אופס! היתה שגיאה בשליחה. נסי שוב.</div>
 
                 <form id="email-form" action="https://api.sheetmonkey.io/form/5GEFNeXsBeuwMtn1vdvEiC" method="POST">
-                    <!-- שדה נסתר להוספת תאריך ושעה אוטומטיים של Sheet Monkey -->
+                    <!-- Hidden field to add automatic date and time for Sheet Monkey -->
                     <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
                     
                     <div class="flex space-x-2 space-x-reverse mt-2 relative">
-                        <!-- שימי לב שהשם שונה ל-Email עם E גדולה כדי להתאים בדיוק להגדרת הטופס שלך -->
+                        <!-- Note that the name is changed to Email with capital E to match your form definition exactly -->
                         <input type="email" name="Email" id="email" placeholder="כתובת המייל שלך" required class="w-full px-3 py-2 text-xs rounded-xl bg-white text-cozyText focus:outline-none focus:ring-2 focus:ring-parisRed" />
                         <button type="submit" id="submit-btn" class="bg-parisRed text-white px-4 py-2 rounded-xl font-bold text-xs hover:bg-opacity-90 transition-all disabled:opacity-50">שלחי</button>
                     </div>
@@ -182,7 +182,7 @@
 
         </main>
 
-        <!-- קרוסלת הספרים שקראנו -->
+        <!-- Carousel of books we've read -->
         <section class="bg-white/95 rounded-3xl p-5 shadow-md border border-lightGrass mb-8 relative">
             <h2 class="font-serif font-bold text-lg text-parisBlue mb-3 flex items-center space-x-2 space-x-reverse">
                 <span>📚</span>
@@ -190,7 +190,14 @@
             </h2>
 
             <div class="relative overflow-hidden h-[250px] rounded-xl bg-lightGrass/30 p-3 flex items-center justify-center">
-                
+                <!-- Slide -->
+                <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-10">
+                    <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
+                        <img src="/assets/portrait_Master.jpg" alt="דיוקן עצמי" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'150\'><rect width=\'100\' height=\'150\' fill=\'%23F1F5F9\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' fill=\'%23475569\'>📖</text></svg>'">
+                    </div>
+                    <h3 class="cascadia-code text-base text-parisBlue leading-tight">דיוקן עצמי</h3>
+                    <p class="text-xs text-cozyGreen font-semibold cascadia-code">אדואר לוה</p>
+                </div>
                 <!-- Slide 0 -->
                 <div class="carousel-slide absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 pointer-events-none" id="slide-9">
                     <div class="w-24 h-36 shadow-md rounded mb-2 overflow-hidden border border-parisBlue/10 bg-white">
@@ -291,7 +298,7 @@
             </button>
         </section>
 
-        <!-- הצוות הפעיל -->
+        <!-- Active team -->
         <section class="bg-lightGrass rounded-2xl p-4 text-center border border-cozyGreen/20 mb-6">
             <h3 class="text-sm font-bold text-parisBlue mb-1"><i class="fa-solid fa-heart text-parisRed ml-1"></i> המארגנות והצוות הפעיל</h3>
             <p class="text-xs text-cozyText/80 mb-3">מחכות לכן! תרגישו חופשי לפנות אלינו באינסטגרם בכל שאלה :)</p>
@@ -312,18 +319,18 @@
             </div>
         </section>
 
-        <!-- פוטר קבוע -->
+        <!-- Fixed footer -->
         <footer class="text-center text-[11px] text-black bg-white/95 backdrop-blur-sm border border-lightGrass rounded-2xl p-3 pb-4 shadow-sm">
             מועדון ספרים צרפתיים שלום • אובלומוב ספרים, נחמה 4, יפו 📍
         </footer>
 
     </div>
 
-    <!-- לוגיקת האתר -->
+    <!-- Site logic -->
     <script>
         let currentSlide = 0;
-        const totalSlides = 10;
-
+        const totalSlides = 11;
+        
         function updateCarousel() {
             for (let i = 0; i < totalSlides; i++) {
                 const slide = document.getElementById('slide-' + i);
@@ -347,20 +354,20 @@
             updateCarousel();
         }
 
-        // לוגיקת שליחת טופס חלקה ל-Sheet Monkey (AJAX Fetch)
+        // Smooth form submission logic to Sheet Monkey (AJAX Fetch)
         const form = document.getElementById("email-form");
         const successMessage = document.getElementById("form-success");
         const errorMessage = document.getElementById("form-error");
         const submitBtn = document.getElementById("submit-btn");
 
         form.addEventListener("submit", async function(event) {
-            event.preventDefault(); // מונע מהדף להתרענן או לעבור לאתר של Sheet Monkey
+            event.preventDefault(); // Prevents page refresh or redirect to Sheet Monkey site
             
-            // שינוי מצב הכפתור לזמן השליחה
+            // Change button state during send
             submitBtn.innerText = "שולח...";
             submitBtn.disabled = true;
             
-            // הסתרת הודעות קודמות אם היו
+            // Hide previous messages if any
             successMessage.classList.add("hidden");
             errorMessage.classList.add("hidden");
 
@@ -373,16 +380,16 @@
                 });
 
                 if (response.ok) {
-                    successMessage.classList.remove("hidden"); // מציג הודעת הצלחה
-                    form.reset(); // מאפס את שדה הטקסט של המייל
+                    successMessage.classList.remove("hidden"); // Show success message
+                    form.reset(); // Reset the email field
                     submitBtn.innerText = "נשלח!";
                 } else {
-                    errorMessage.classList.remove("hidden"); // מציג שגיאה מהשרת
+                    errorMessage.classList.remove("hidden"); // Show server error
                     submitBtn.innerText = "שלחי";
                     submitBtn.disabled = false;
                 }
             } catch (error) {
-                errorMessage.classList.remove("hidden"); // מציג שגיאת רשת
+                errorMessage.classList.remove("hidden"); // Show network error
                 submitBtn.innerText = "שלחי";
                 submitBtn.disabled = false;
             }
